@@ -124,3 +124,81 @@ print(randomInts)
 
 
 
+//enum -> enumeration (group of value that are releated)
+//enum phone {
+//    case iphone
+//    case nokia
+//    case pixel
+//    case samsung
+//}
+
+// another method
+//enum phone{ case iphone,nokia,pixel,samsung }
+
+// enum with raw type
+//enum Phone : String{
+//    case iphone = "This is my current phone"
+//    case nokia = "In-Distructable"
+//    case pixel = "Best Android"
+//    case samsung = "UI is awsome"
+//}
+
+//func getPhoneOpinion (on phone : Phone){
+//    print(phone.rawValue)
+//}
+//getPhoneOpinion(on: Phone.iphone)
+//or
+//getPhoneOpinion(on: .nokia)
+
+
+//switch Statement
+
+enum Phone {
+    case iphone
+    case nokia
+    case pixel
+    case samsung
+}
+
+func getPhoneOpinion(on phone:Phone){
+//    switch statemet help code to be more readable
+    switch phone {
+    case .iphone:
+        print("This is my current phone")
+    case .nokia:
+        print("In-Distructable")
+    case .pixel:
+        print("Best Android")
+    default:
+        print("UI is awsome")
+    }
+    
+//    basic if else statement
+//    if phone == .iphone{
+//        print("This is my current phone")
+//    }else if phone == .nokia{
+//        print("In-Distructable")
+//    }else if phone == .pixel{
+//        print("Best Android")
+//    }else{
+//        print("UI is awsome")
+//    }
+}
+getPhoneOpinion(on: .iphone)
+
+//another example
+
+var ranking :Int = 500
+
+switch ranking{
+case 0:
+    print("Play the the game to determine the league")
+case 1..<50:
+    print("Human league")
+case 50..<500:
+    print("Legend league")
+case 500:
+    print("Alien league")
+default:
+    print("Hacker")
+}
